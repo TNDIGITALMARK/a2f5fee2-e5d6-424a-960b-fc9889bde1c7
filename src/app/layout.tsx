@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { QueryProvider } from "@/components/query-provider";
+import { CartProvider } from "@/contexts/CartContext";
+import { ShoppingCart } from "@/components/ShoppingCart";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -18,8 +20,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Flora Boutique",
-  description: "Beautiful AI-powered website creation platform",
+  title: "Peak Nutrition - Premium Supplements",
+  description: "Your trusted source for premium fitness supplements. Fuel your fitness journey with quality protein, pre-workout, amino acids, and more.",
 };
 
 export default function RootLayout({
@@ -40,9 +42,12 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <TooltipProvider>
-              {children}
-              <Toaster />
-              <Sonner />
+              <CartProvider>
+                {children}
+                <ShoppingCart />
+                <Toaster />
+                <Sonner />
+              </CartProvider>
             </TooltipProvider>
           </ThemeProvider>
         </QueryProvider>
