@@ -23,7 +23,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Peak Nutrition - Premium Supplements",
-  description: "Your trusted source for premium fitness supplements. Fuel your fitness journey with quality protein, pre-workout, amino acids, and more.",
+  description: "Your trusted source for premium fitness supplements. retyuit with quality protein, pre-workout, amino acids, and more.",
 };
 
 export default function RootLayout({

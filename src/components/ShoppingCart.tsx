@@ -50,7 +50,7 @@ export function ShoppingCart() {
                 Your cart is empty
               </h3>
               <p className="text-gray-600 mb-6 max-w-sm">
-                Start adding some supplements to fuel your fitness journey!
+                Start adding some supplements to retyuit!
               </p>
               <Button onClick={closeCart} className="bg-primary hover:bg-primary/90">
                 Continue Shopping
